@@ -1,0 +1,282 @@
+/* ===========================
+   GENEL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(180deg,#fff7fb,#ffe7f1,#fff);
+    color:#444;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:90px;
+    color:#ff3f8e;
+}
+
+.hero span{
+    color:#ff0055;
+}
+
+.subtitle{
+    margin-top:20px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    max-width:700px;
+}
+
+button{
+    margin-top:50px;
+    padding:18px 50px;
+    border:none;
+    border-radius:60px;
+    background:#ff4f9a;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:.4s;
+    box-shadow:0 15px 40px rgba(255,79,154,.35);
+}
+
+button:hover{
+    transform:translateY(-5px) scale(1.05);
+    background:#ff2f86;
+}
+
+/* ===========================
+   SAYAÇ
+=========================== */
+
+.counter-section{
+    padding:120px 20px;
+    text-align:center;
+}
+
+.counter-section h2{
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    color:#ff3f8e;
+    margin-bottom:50px;
+}
+
+.counter{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.box{
+    width:170px;
+    height:170px;
+    border-radius:30px;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:.4s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+}
+
+.box span{
+    font-size:48px;
+    font-weight:bold;
+    color:#ff3f8e;
+}
+
+.box small{
+    margin-top:10px;
+    font-size:20px;
+}
+
+/* ===========================
+   GALERİ
+=========================== */
+
+.gallery{
+    padding:120px 8%;
+}
+
+.gallery h2{
+    text-align:center;
+    font-size:60px;
+    font-family:'Great Vibes',cursive;
+    color:#ff3f8e;
+    margin-bottom:60px;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+}
+
+.card h3{
+    color:#ff3f8e;
+    text-align:center;
+    margin-top:20px;
+    font-size:30px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.card p{
+    padding:20px 25px 30px;
+    text-align:center;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ===========================
+   MEKTUP
+=========================== */
+
+.letter{
+    padding:140px 20px;
+    text-align:center;
+}
+
+.letter h2{
+    font-family:'Great Vibes',cursive;
+    color:#ff3f8e;
+    font-size:70px;
+    margin-bottom:40px;
+}
+
+.letter-box{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:50px;
+    border-radius:30px;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.letter-box p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    line-height:2;
+}
+
+/* ===========================
+   FİNAL
+=========================== */
+
+.final{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.final h1{
+    font-family:'Great Vibes',cursive;
+    color:#ff3f8e;
+    font-size:85px;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* ===========================
+   TELEFON
+=========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:60px;
+}
+
+.subtitle{
+    font-size:24px;
+}
+
+.counter-section h2,
+.gallery h2,
+.letter h2{
+    font-size:45px;
+}
+
+.final h1{
+    font-size:50px;
+}
+
+.card img{
+    height:300px;
+}
+
+.letter-box{
+    padding:30px;
+}
+
+.letter-box p{
+    font-size:22px;
+}
+
+}
